@@ -13,4 +13,12 @@
 	./bootstrap.sh --prefix=/data/home/rexyuan/ocrenv/boost166/ --with-python=/data/home/rexyuan/miniconda3/envs/py27/bin/py2
 ./b2 install
 
+# compile project
+1. mkdir build
+2. cd build
+3. cmake  -DCMAKE_BUILD_TYPE=DEBUG ..
+4. make
+
+# test
+python classes.py
 
