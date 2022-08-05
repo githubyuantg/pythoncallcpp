@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 2.8.3)
+add_compile_options(-std=c++11)
+set(PYTHON_LIBRARY "/data/home/rexyuan/miniconda3/envs/py27/lib/python2.7")
+set(PYTHON_INCLUDE_DIR "/data/home/rexyuan/miniconda3/envs/py27/include/python2.7/")
+
+FIND_PACKAGE(PythonInterp 2.7.10 REQUIRED)
+FIND_PACKAGE(PythonLibs 2.7.10 REQUIRED)
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
+include_directories(/data/home/rexyuan/ocrenv/boost166/include)
+include_directories(${PYTHON_INCLUDE_DIR})
+link_directories(/data/home/rexyuan/ocrenv/boost166/lib)
+# libboost_python.a
+PYTHON_ADD_MODULE(classes classes.cpp)
+# add_library(id_ocr STATIC ${library_src})
+target_link_libraries(classes -lboost_python)
+FILE(COPY classes.py DESTINATION .)
+ADD_TEST(NAME 02-ExposingClasses COMMAND ${PYTHON_EXECUTABLE} classes.py)
