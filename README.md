@@ -16,5 +16,5 @@
 4. make
 
 # test
-python classes.py
+python demo.py
 
