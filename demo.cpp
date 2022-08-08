@@ -42,7 +42,7 @@ char const* sayhi()
 
 using namespace boost::python;
 
-BOOST_PYTHON_MODULE(classes)
+BOOST_PYTHON_MODULE(demo)
 {
     class_<World>("World")
         .def("greet", &World::greet)

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import classes
+import demo
 
-t = classes.World()
+t = demo.World()
 t.set("bom dia!")
 print (t.greet())
 
@@ -10,9 +10,9 @@ t.many(['Good Morning', 'Buon giorno', 'Kali mera'])
 print (t.greet())
 
 
-t = classes.CatYou()
+t = demo.CatYou()
 print (t.add(1, 8))
 print (t.cat(1, "8"))
 
-print(classes.sayhi())
+print(demo.sayhi())
 
