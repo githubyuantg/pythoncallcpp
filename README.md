@@ -7,7 +7,7 @@
 3. compile options & config
 	./bootstrap.sh --prefix=/data/home/rexyuan/ocrenv/boost166/ --with-python=/data/home/rexyuan/miniconda3/envs/py27/bin/py2
 4. compile command
-	./b2 install
+	./b2 install cxxflags=-fPIC cflags=-fPIC
 
 # compile project
 1. mkdir build
